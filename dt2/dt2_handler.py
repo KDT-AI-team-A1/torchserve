@@ -55,7 +55,7 @@ class ModelHandler(object):
 
             # set the testing threshold for this model
             cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
-            
+
             self.predictor = DefaultPredictor(cfg)
 
             print("predictor built on initialize")
@@ -67,6 +67,7 @@ class ModelHandler(object):
         except:  # catch *all* exceptions
             e = sys.exc_info()[0]
             print("Error: {}".format(e))
+            print(sys.exc_info())
 
         self._context = context
         self._batch_size = context.system_properties["batch_size"]
