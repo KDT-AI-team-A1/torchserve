@@ -8,3 +8,5 @@
 2021-03-23 14:44:23,619 - PredictionTime.Milliseconds:2287.55|#ModelName:fastrcnn,Level:Model|#hostname:DESKTOP-LYJ,requestID:b069df02-b9e4-4ded-b8a1-be2dc82f95a5,timestamp:1616478247
 2021-03-23 14:44:31,814 - HandlerTime.Milliseconds:2214.07|#ModelName:fastrcnn,Level:Model|#hostname:DESKTOP-LYJ,requestID:1d460832-aa69-4e26-94c8-fa842b1ecfbc,timestamp:1616478271
 2021-03-23 14:44:31,814 - PredictionTime.Milliseconds:2214.07|#ModelName:fastrcnn,Level:Model|#hostname:DESKTOP-LYJ,requestID:1d460832-aa69-4e26-94c8-fa842b1ecfbc,timestamp:1616478271
+2021-03-23 17:47:06,002 - PredictionTime.Milliseconds:1386.04|#ModelName:detectron2,Level:Model|#hostname:linuxlyj,requestID:363b4fba-d9e7-4641-a1e4-24ce32b43a30,timestamp:1616489225
+2021-03-23 17:47:11,580 - PredictionTime.Milliseconds:326.06|#ModelName:detectron2,Level:Model|#hostname:linuxlyj,requestID:838eb676-ab83-40e7-8213-06dee9f78f73,timestamp:1616489231

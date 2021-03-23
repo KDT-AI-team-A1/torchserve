@@ -102,7 +102,7 @@ class ModelHandler(object):
 
             # add the image to our list
             images.append(img)
-            self.img_2 = img
+            #self.img_2 = img
 
         print("pre-processing finished for a batch of {}".format(len(batch)))
 
@@ -158,12 +158,12 @@ class ModelHandler(object):
 
         elapsed_time = time.time() - start_time
 
-        from detectron2.utils.visualizer import Visualizer
-        from detectron2.data import MetadataCatalog
+        #from detectron2.utils.visualizer import Visualizer
+        #from detectron2.data import MetadataCatalog
 
-        v = Visualizer(self.img_2[:, :, ::-1], MetadataCatalog.get(self.cfg.DATASETS.TRAIN[0]), scale=1.2)
-        v = v.draw_instance_predictions(output["instances"].to("cpu"))
-        v.save('output.jpg')
+        #v = Visualizer(self.img_2[:, :, ::-1], MetadataCatalog.get(self.cfg.DATASETS.TRAIN[0]), scale=1.2)
+        #v = v.draw_instance_predictions(output["instances"].to("cpu"))
+        #v.save('output.jpg')
             
         print("post-processing finished for a batch of {} in {}".format(len(inference_output), elapsed_time))
 
