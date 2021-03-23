@@ -1,0 +1,10 @@
+2021-03-11 18:49:47,600 - /127.0.0.1:13128 "PUT /explanations/mnist HTTP/1.1" 200 73
+2021-03-11 18:49:59,177 - /127.0.0.1:13138 "GET /explanations/mnist_explain HTTP/1.1" 404 8
+2021-03-11 18:51:26,978 - /127.0.0.1:13360 "PUT /explanations/mnist HTTP/1.1" 200 18
+2021-03-11 18:51:46,397 - /127.0.0.1:13394 "GET /explanations/mnist_explain HTTP/1.1" 404 0
+2021-03-11 18:52:00,325 - /127.0.0.1:13438 "POST /explanations/mnist_explain HTTP/1.1" 404 1
+2021-03-12 12:59:05,431 - /127.0.0.1:13058 "GET / HTTP/1.1" 405 11
+2021-03-12 12:59:05,506 - /127.0.0.1:13059 "GET /favicon.ico HTTP/1.1" 404 1
+2021-03-12 13:00:45,617 - /127.0.0.1:13231 "PUT /predictions/fastrcnn HTTP/1.1" 200 2331
+2021-03-23 14:44:23,620 - /127.0.0.1:5573 "PUT /predictions/fastrcnn HTTP/1.1" 200 18805
+2021-03-23 14:44:31,814 - /127.0.0.1:5575 "PUT /predictions/fastrcnn HTTP/1.1" 200 2217
