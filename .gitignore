@@ -11,3 +11,4 @@ dist/
 .DS_Store
 model_store/
 pth_store/
+logs/
