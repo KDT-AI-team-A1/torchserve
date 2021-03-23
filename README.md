@@ -1,6 +1,6 @@
 # TorchServe
 
-## Windows 환경에서 실행
+## Windows 환경
 
 ### Prerequisites
 
@@ -10,7 +10,7 @@
   - Git
   - openjdk11
 
-
+## Object Detection 예제
 > [https://github.com/pytorch/serve/tree/master/examples/object_detector/fast-rcnn](https://github.com/pytorch/serve/tree/master/examples/object_detector/fast-rcnn)
 
 ### mar 파일 생성
@@ -37,4 +37,10 @@ torchserve --start --model-store model_store --models fastrcnn=fastrcnn.mar --nc
 
 ```bash
 curl http://127.0.0.1:8080/predictions/fastrcnn -T examples/object_detector/persons.jpg
+```
+
+### 서버 종료
+
+```bash
+torchserve --stop
 ```
