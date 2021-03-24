@@ -53,14 +53,16 @@ curl http://3.36.90.232:8080/ping
 wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1hloK0I8az-VXb56dYBMnp0adaP8Lv948' -O input_mask.jpg
 ```
 
+`POST /predictions/{model_name}`
+
 *curl example*
 
-Faster R-CNN
-```bash
-curl http://3.36.90.232:8080/predictions/fastrcnn -T input_mask.jpg
-```
+- Faster R-CNN
+  ```bash
+  curl http://3.36.90.232:8080/predictions/fastrcnn -T input_mask.jpg
+  ```
 
-Cascade R-CNN
-```bash
-curl http://3.36.90.232:8080/predictions/cascadercnn -T input_mask.jpg
-```
+- Cascade R-CNN
+  ```bash
+  curl http://3.36.90.232:8080/predictions/cascadercnn -T input_mask.jpg
+  ```
