@@ -20,7 +20,8 @@ curl http://127.0.0.1:8080/predictions/faster_rcnn -T dt2/mask_input.jpg
 curl http://127.0.0.1:8080/predictions/cascade_rcnn -T dt2/mask_input.jpg
 
 
-# torchserve/pth_store 에서 실행
+# 구글 드라이브로부터 파일 다운로드
+# (torchserve/pth_store 에서 실행)
 
 ## faster pth
 
@@ -28,4 +29,4 @@ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download
 
 ## cascade pth
 
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1DOny_eMt2DdfAmZ8rkVDOcUYpva0vZIj' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1DOny_eMt2DdfAmZ8rkVDOcUYpva0vZIj" -O ./cascade_rcnn/model_final.pth && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=11nWjdFf1kQgTsKZGcc97I_3q_wNjzMJu' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=11nWjdFf1kQgTsKZGcc97I_3q_wNjzMJu" -O ./cascade_rcnn/model_final.pth && rm -rf /tmp/cookies.txt
