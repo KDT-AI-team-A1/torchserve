@@ -28,14 +28,14 @@ PyTorch용 모델 서비스 프레임워크인 TorchServe를 이용하여 딥러
 
 ## REST API
 
-inference address: http://3.36.90.232:8080 
+inference address: http://3.36.161.101:8080
 
 ### Healthy Check API
 
 *curl example*
 
 ```bash
-curl http://3.36.90.232:8080/ping
+curl http://3.36.161.101:8080/ping
 ```
 
 - 정상적으로 작동중인 경우
@@ -59,10 +59,10 @@ wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1hloK
 
 - Faster R-CNN
   ```bash
-  curl http://3.36.90.232:8080/predictions/fastrcnn -T input_mask.jpg
+  curl http://3.36.161.101:8080/predictions/fastrcnn -T input_mask.jpg
   ```
 
 - Cascade R-CNN
   ```bash
-  curl http://3.36.90.232:8080/predictions/cascadercnn -T input_mask.jpg
+  curl http://3.36.161.101:8080/predictions/cascadercnn -T input_mask.jpg
   ```
