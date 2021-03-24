@@ -1,14 +1,31 @@
-torch-model-archiver --model-name detectron --version 1.0 --serialized-file dt2/model_final.pth --extra-files dt2/config.yaml --handler dt2/dt2_handler.py --export-path model_store -f
+################
+# COMMAND 정리 #
+################
 
-torchserve --start --ncs --model-store model_store --models detectron=detectron.mar
+# mar 생성
 
----
+## faster pth
+torch-model-archiver --model-name faster_rcnn --version 1.0 --serialized-file pth_store/faster_rcnn/model_final.pth --extra-files dt2/faster_rcnn/config.yaml --handler dt2/dt2_handler.py --export-path model_store -f
 
-torch-model-archiver --model-name detectron2 --version 1.0 --serialized-file dt2/model_final.pth --extra-files dt2/config.yaml --handler dt2/dt2_handler.py --export-path model_store -f
+## cascade pth
 
-torchserve --start --ncs --model-store model_store --models detectron2=detectron2.mar
+torch-model-archiver --model-name cascade_rcnn --version 1.0 --serialized-file pth_store/cascade_rcnn/model_final.pth --extra-files dt2/cascade_rcnn/config.yaml --handler dt2/dt2_handler.py --export-path model_store -f
 
-curl http://127.0.0.1:8080/predictions/detectron2 -T dt2/mask_input.jpg
 
-curl http://127.0.0.1:8080/predictions/detectron2 -T dt2/mask_input.jpg -O dt2/mask_output.json
+# 서버 실행
+torchserve --start --ncs --ts-config config.properties
 
+# 테스트
+curl http://127.0.0.1:8080/predictions/faster_rcnn -T dt2/mask_input.jpg
+curl http://127.0.0.1:8080/predictions/cascade_rcnn -T dt2/mask_input.jpg
+
+
+# torchserve/pth_store 에서 실행
+
+## faster pth
+
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=11EhCzfkxDzLnds-8emRVBSG4CzisuR1E' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=11EhCzfkxDzLnds-8emRVBSG4CzisuR1E" -O ./faster_rcnn/model_final.pth && rm -rf /tmp/cookies.txt
+
+## cascade pth
+
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1DOny_eMt2DdfAmZ8rkVDOcUYpva0vZIj' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1DOny_eMt2DdfAmZ8rkVDOcUYpva0vZIj" -O ./cascade_rcnn/model_final.pth && rm -rf /tmp/cookies.txt
