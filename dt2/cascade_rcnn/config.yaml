@@ -266,8 +266,6 @@ MODEL:
     NORM: GN
     NUM_CLASSES: 54
   WEIGHTS: model_final.pth
-MY_CUSTOM:
-  LOG_FILE: ./output/my_log.txt
 OUTPUT_DIR: /content/output/
 SEED: -1
 SOLVER:
